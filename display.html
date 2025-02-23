@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Screen</title>
+</head>
+<body>
+    <h1>Team 2: Display Screen</h1>
+    <p>Current State: <span id="current-state">[0, 0, 0, 0, 0]</span></p>
+    <p id="status">Waiting for input...</p>
+
+    <script>
+        const socket = new WebSocket("ws://localhost:8000/ws");
+
+        socket.onmessage = function(event) {
+            let data = JSON.parse(event.data);
+            if (data.type === "update") {
+                document.getElementById("current-state").innerText = JSON.stringify(data.state);
+            } else if (data.type === "win") {
+                document.getElementById("status").innerText = "You win!";
+            }
+        };
+    </script>
+</body>
+</html>
