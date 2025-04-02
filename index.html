@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stat Tracker</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Player 1 -->
+      <div class="player">
+        <div class="player-name">Player 1</div>
+
+        <!-- Defense Block -->
+        <div class="stat-block">
+          <div class="section-label">Stats</div>
+
+          <div class="stat-row">
+            <div class="display-group">
+              <span class="display-value">Max HP</span>
+              
+            </div>
+            <div class="controls">
+              <button class="btn max-hp-decrease">➖</button>
+              <button class="btn max-hp-increase">➕</button>
+            </div>
+          </div>
+          <!-- HP -->
+          <div class="stat-row">
+            <div class="display-group">
+              <span class="display-value hearts">❤️❤️❤️🖤🖤</span>
+            </div>
+            <div class="controls">
+              <button class="btn hp-decrease">➖</button>
+              <button class="btn hp-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Lives -->
+          <div class="stat-row">
+            <div class="display-value lives">💖 × 2</div>
+            <div class="stat-label">Lives</div>
+            <div class="controls">
+              <button class="btn life-decrease">➖</button>
+              <button class="btn life-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Heal Efficacy -->
+          <div class="stat-row">
+            <div class="display-value heal">🌿 × 3</div>
+            <div class="stat-label">Heal Efficacy</div>
+            <div class="controls">
+              <button class="btn heal-decrease">➖</button>
+              <button class="btn heal-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Damage Reduction -->
+          <div class="stat-row">
+            <div class="display-value reduction">🪨 × 1</div>
+            <div class="stat-label">DR</div>
+            <div class="controls">
+              <button class="btn reduction-decrease">➖</button>
+              <button class="btn reduction-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Shield -->
+          <div class="stat-row">
+            <div class="display-value shield">🛡️ × 3</div>
+            <div class="stat-label">Shield</div>
+            <div class="controls">
+              <button class="btn shield-decrease">➖</button>
+              <button class="btn shield-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Roll Power -->
+          <div class="stat-row">
+            <div class="display-value roll">🎲 × 3</div>
+            <div class="stat-label">Roll Power</div>
+            <div class="controls">
+              <button class="btn roll-decrease">➖</button>
+              <button class="btn roll-increase">➕</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offense Block -->
+        <div class="stat-block">
+          <div class="section-label">Attack</div>
+          <div class="damage-section">
+            <!-- Primary -->
+            <div class="damage-group">
+              <div class="damage-header">
+                <div class="damage-label">⚔️</div>
+              </div>
+              <div class="damage-row">
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value base">4</div>
+                  <button class="btn">➖</button>
+                </div>
+                <div class="plus-symbol">+</div>
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value bonus">2</div>
+                  <button class="btn">➖</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="damage-group">
+              <div class="damage-header">
+                <div class="damage-label">🏹</div>
+              </div>
+              <div class="damage-row">
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value base">4</div>
+                  <button class="btn">➖</button>
+                </div>
+                <div class="plus-symbol">+</div>
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value bonus">2</div>
+                  <button class="btn">➖</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Block -->
+        <div class="stat-block">
+          <div class="section-label">Damage Info</div>
+          <div class="info-section">
+            <!-- Labels -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label" style="visibility: hidden;">⚔️</div></div>
+              <div class="info-row"><div class="stat-label">Deal:</div></div>
+              <div class="info-row"><div class="stat-label">Receive:</div></div>
+            </div>
+
+            <!-- Primary -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label">⚔️</div></div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">1.5× <input type="checkbox" /></label>
+              </div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">½ <input type="checkbox" /></label>
+              </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label">🏹</div></div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">1.5× <input type="checkbox" /></label>
+              </div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">½ <input type="checkbox" /></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Player 2 -->
+      <div class="player">
+        <div class="player-name">Player 2</div>
+
+        <!-- Defense Block -->
+        <div class="stat-block">
+          <div class="section-label">Stats</div>
+
+          <div class="stat-row">
+            <div class="display-group">
+              <span class="display-value">Max HP</span>
+              
+            </div>
+            <div class="controls">
+              <button class="btn max-hp-decrease">➖</button>
+              <button class="btn max-hp-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- HP -->
+          <div class="stat-row">
+            <div class="display-group">
+              <span class="display-value hearts">❤️❤️❤️🖤🖤</span>
+            </div>
+            <div class="controls">
+              <button class="btn hp-decrease">➖</button>
+              <button class="btn hp-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Lives -->
+          <div class="stat-row">
+            <div class="display-value lives">💖 × 2</div>
+            <div class="stat-label">Lives</div>
+            <div class="controls">
+              <button class="btn life-decrease">➖</button>
+              <button class="btn life-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Heal Efficacy -->
+          <div class="stat-row">
+            <div class="display-value heal">🌿 × 3</div>
+            <div class="stat-label">Heal Efficacy</div>
+            <div class="controls">
+              <button class="btn heal-decrease">➖</button>
+              <button class="btn heal-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Damage Reduction -->
+          <div class="stat-row">
+            <div class="display-value reduction">🪨 × 1</div>
+            <div class="stat-label">DR</div>
+            <div class="controls">
+              <button class="btn reduction-decrease">➖</button>
+              <button class="btn reduction-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Shield -->
+          <div class="stat-row">
+            <div class="display-value shield">🛡️ × 3</div>
+            <div class="stat-label">Shield</div>
+            <div class="controls">
+              <button class="btn shield-decrease">➖</button>
+              <button class="btn shield-increase">➕</button>
+            </div>
+          </div>
+
+          <!-- Roll Power -->
+          <div class="stat-row">
+            <div class="display-value roll">🎲 × 3</div>
+            <div class="stat-label">Roll Power</div>
+            <div class="controls">
+              <button class="btn roll-decrease">➖</button>
+              <button class="btn roll-increase">➕</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offense Block -->
+        <div class="stat-block">
+          <div class="section-label">Attack</div>
+          <div class="damage-section">
+            <!-- Primary -->
+            <div class="damage-group">
+              <div class="damage-header">
+                <div class="damage-label">⚔️</div>
+              </div>
+              <div class="damage-row">
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value base">4</div>
+                  <button class="btn">➖</button>
+                </div>
+                <div class="plus-symbol">+</div>
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value bonus">2</div>
+                  <button class="btn">➖</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="damage-group">
+              <div class="damage-header">
+                <div class="damage-label">🏹</div>
+              </div>
+              <div class="damage-row">
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value base">4</div>
+                  <button class="btn">➖</button>
+                </div>
+                <div class="plus-symbol">+</div>
+                <div class="damage-cell">
+                  <button class="btn">➕</button>
+                  <div class="damage-value bonus">2</div>
+                  <button class="btn">➖</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info Block -->
+        <div class="stat-block">
+          <div class="section-label">Damage Info</div>
+          <div class="info-section">
+            <!-- Labels -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label" style="visibility: hidden;">⚔️</div></div>
+              <div class="info-row"><div class="stat-label">Deal:</div></div>
+              <div class="info-row"><div class="stat-label">Receive:</div></div>
+            </div>
+
+            <!-- Primary -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label">⚔️</div></div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">1.5× <input type="checkbox" /></label>
+              </div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">½ <input type="checkbox" /></label>
+              </div>
+            </div>
+
+            <!-- Secondary -->
+            <div class="damage-group">
+              <div class="info-header"><div class="damage-label">🏹</div></div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">1.5× <input type="checkbox" /></label>
+              </div>
+              <div class="info-row">
+                <div class="damage-total">6</div>
+                <label class="dmg-toggle">½ <input type="checkbox" /></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="stat.js"></script>
+  </body>
+</html>
