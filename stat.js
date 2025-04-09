@@ -18,6 +18,8 @@ class Player {
     this.primary = { base: 1, bonus: 0 };
     this.secondary = { base: 1, bonus: 0 };
 
+    this.round = 0;
+
     this.initListeners();
       this.updateDisplay();
     }
@@ -212,4 +214,24 @@ function resetGame() {
     players[0].updateDisplay();
     players[1].updateDisplay();
   }
+}
+
+// round display
+let round = 0;
+
+const roundDisplay = document.getElementById('round-display');
+const roundIncrease = document.getElementById('round-increase');
+const roundDecrease = document.getElementById('round-decrease');
+
+roundIncrease.addEventListener('click', () => {
+  changeRound(1);
+});
+
+roundDecrease.addEventListener('click', () => {
+  changeRound(-1);
+});
+
+function changeRound(amount) {
+  round = Math.max(1, round + amount);
+  roundDisplay.innerHTML = `Round: ${round}`;
 }

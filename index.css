@@ -171,3 +171,11 @@ body {
   font-style: italic;
   color: #666;
 }
+
+.round-display {
+  font-size: 1.5rem;
+}
+
+.round-controls {
+  display: flex;
+}
