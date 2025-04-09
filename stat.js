@@ -217,7 +217,7 @@ function resetGame() {
 }
 
 // round display
-let round = 0;
+let round = 1;
 
 const roundDisplay = document.getElementById('round-display');
 const roundIncrease = document.getElementById('round-increase');
